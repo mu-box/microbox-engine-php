@@ -1,6 +1,6 @@
 # Advanced PHP Configuration Options
 
-This engine exposes configuration options through the [boxfile.yml](http://docs.nanobox.io/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Nanobox. Being a generic PHP engine, there are a lot of configuration options to try to allow compatibility with as many PHP apps as possible. This engine makes the following options available.
+This engine exposes configuration options through the [boxfile.yml](https://docs.microbox.cloud/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Microbox. Being a generic PHP engine, there are a lot of configuration options to try to allow compatibility with as many PHP apps as possible. This engine makes the following options available.
 
 #### Overview of boxfile.yml Configuration Options
 ```yaml
@@ -153,20 +153,20 @@ run.config:
 ```
 
 ##### Quick Links
-[Web Server Settings](#web-server-settings)  
-[PHP Settings](#php-settings)  
-[Apache Settings](#apache-settings)  
-[Nginx Settings](#nginx-settings)  
-[Built-In PHP Web Server Settings](#built-in-php-web-server-settings)  
-[PHP-FPM Settings](#php-fpm-settings)  
-[PHP GeoIP Settings](#php-geoip-settings)  
-[PHP Memcache Settings](#php-memcache-settings)  
-[PHP Mongo Settings](#php-mongo-settings)  
-[PHP APC Settings](#php-apc-settings)  
-[PHP eAccelerator Settings](#php-eaccelerator-settings)  
-[PHP OPcache Settings](#php-opcache-settings)  
-[PHP XCache Settings](#php-xcache-settings)  
-[PHP New Relic Settings](#php-new-relic-settings)  
+[Web Server Settings](#web-server-settings)
+[PHP Settings](#php-settings)
+[Apache Settings](#apache-settings)
+[Nginx Settings](#nginx-settings)
+[Built-In PHP Web Server Settings](#built-in-php-web-server-settings)
+[PHP-FPM Settings](#php-fpm-settings)
+[PHP GeoIP Settings](#php-geoip-settings)
+[PHP Memcache Settings](#php-memcache-settings)
+[PHP Mongo Settings](#php-mongo-settings)
+[PHP APC Settings](#php-apc-settings)
+[PHP eAccelerator Settings](#php-eaccelerator-settings)
+[PHP OPcache Settings](#php-opcache-settings)
+[PHP XCache Settings](#php-xcache-settings)
+[PHP New Relic Settings](#php-new-relic-settings)
 
 ### Web Server Settings
 The following setting is used to select which web server to use in your application.
@@ -206,7 +206,7 @@ run.config:
 ---
 
 ### PHP Settings
-The following settings are typically configured in the php.ini. When using Nanobox, these are configured in the boxfile.yml.
+The following settings are typically configured in the php.ini. When using Microbox, these are configured in the boxfile.yml.
 
 - [runtime](#runtime)
 - [extensions](#extensions)
@@ -261,7 +261,7 @@ run.config:
 ---
 
 #### extensions
-Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md).
+Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md).
 
 ```yaml
 run.config:
@@ -277,7 +277,7 @@ run.config:
 ---
 
 #### zend_extensions
-Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md#zend-extensions).
+Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md#zend-extensions).
 ```yaml
 run.config:
   engine: php
@@ -532,7 +532,7 @@ Sets the [`session.save_path` PHP setting](http://www.php.net/manual/en/session.
 run.config:
   engine: php
   engine.config:
-    session_save_path: '/tmp/nanobox/sessions'
+    session_save_path: '/tmp/microbox/sessions'
 ```
 
 ---
@@ -671,7 +671,7 @@ run.config:
 
 #### apache_modules
 
-Specify which Apache modules to enable or disable. View the [full list of available Apache Modules](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/apache-modules.md). By default, all modules are enabled.
+Specify which Apache modules to enable or disable. View the [full list of available Apache Modules](https://github.com/mu-box/microbox-engine-php/blob/main/doc/apache-modules.md). By default, all modules are enabled.
 ```yaml
 run.config:
   engine: php
@@ -1502,4 +1502,4 @@ run.config:
 ---
 
 ## Help & Support
-This is a generic (non-framework-specific) PHP engine provided by [Nanobox](http://nanobox.io). If you need help with this engine, you can reach out to us in the [#nanobox IRC channel](http://webchat.freenode.net/?channels=nanobox). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/nanobox-io/nanobox-engine-php/issues/new).
+This is a generic (non-framework-specific) PHP engine provided by [Microbox](http://microbox.cloud). If you need help with this engine, you can reach out to us in the [Microbox Discord](https://discord.gg/MCDdHfy). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/mu-box/microbox-engine-php/issues/new).

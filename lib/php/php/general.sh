@@ -4,7 +4,7 @@
 generate_php_ini() {
   # Report back to the user
   report_php_settings
-  
+
   nos_template \
     "php/php.ini.mustache" \
     "$(nos_etc_dir)/php/prod_php.ini" \
@@ -516,12 +516,12 @@ configure_php() {
 }
 
 configure_extensions() {
-  
+
   # if there aren't any php extensions we should show a message
   if [[ "$(extensions)" = "[ \"\" ]" ]]; then
     print_extension_warnings
   fi
-  
+
   mkdir -p $(nos_etc_dir)/php.prod.d
   mkdir -p $(nos_etc_dir)/php.dev.d
 
@@ -546,7 +546,7 @@ configure_extensions() {
       fi
     done
   fi
-  
+
   if [[ "${PL_config_extensions_type}" = "array" ]]; then
     for ((i=0; i < PL_config_extensions_length ; i++)); do
       type=PL_config_extensions_${i}_type
@@ -612,10 +612,10 @@ configure_extensions() {
 }
 
 print_extension_warnings() {
-  
+
   message=$(cat <<END
   ----------------------------------  WARNING  ----------------------------------
-  It looks like you haven't declared any php extensions. If this app requires php 
+  It looks like you haven't declared any php extensions. If this app requires php
   extensions, you can declare them in the boxfile like this:
 
   run.config:
@@ -626,9 +626,9 @@ print_extension_warnings() {
         - geoip
         - mysql
 
-  For additional information or clarity, please consult the nanobox php guide:
+  For additional information or clarity, please consult the microbox php guide:
 
-  http://guides.nanobox.io/php
+  https://guides.microbox.cloud/php
 
 END
 )

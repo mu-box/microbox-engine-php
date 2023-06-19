@@ -103,7 +103,7 @@ start_logging() {
   for i in ${logs[@]}; do
     sudo mkdir -p $(dirname $i)
     sudo touch $i
-    sudo chown -R gonano $(dirname $i)
+    sudo chown -R gomicro $(dirname $i)
   done
   tail -f -n0 ${logs[@]} &
 }

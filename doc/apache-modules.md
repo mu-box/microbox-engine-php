@@ -1,5 +1,5 @@
-# Apache Modules Available in the Nanobox PHP Engine
-The apache modules listed below are available to the Nanobox PHP engine.
+# Apache Modules Available in the Microbox PHP Engine
+The apache modules listed below are available to the Microbox PHP engine.
 
 ## Included by Default
 - actions *(only included when using fastcgi)*

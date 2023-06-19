@@ -1,6 +1,6 @@
-# PHP [![Build Status](https://travis-ci.org/nanobox-io/nanobox-engine-php.svg)](https://travis-ci.org/nanobox-io/nanobox-engine-php)
+# PHP [![Build Status](https://github.com/mu-box/microbox-engine-php/actions/workflows/ci.yaml/badge.svg)](https://github.com/mu-box/microbox-engine-php/actions)
 
-This is a generic PHP engine used to launch PHP web and worker services on [Nanobox](http://nanobox.io). It exposes a wide collection configuration options generally handled in the php.ini and other configuration files. Both PHP settings and web server settings are available.
+This is a generic PHP engine used to launch PHP web and worker services on [Microbox](http://microbox.cloud). It exposes a wide collection configuration options generally handled in the php.ini and other configuration files. Both PHP settings and web server settings are available.
 
 ## Usage
 To use this engine, specify in the boxfile.yml:
@@ -14,10 +14,10 @@ This engine uses [Composer](https://getcomposer.org) to manage dependencies. If 
 
 ## Basic Configuration
 
-This engine exposes configuration options through the [boxfile.yml](http://docs.nanobox.io/boxfile/), a yaml config file used to provision and configure your app's platform.
+This engine exposes configuration options through the [boxfile.yml](https://docs.microbox.cloud/boxfile/), a yaml config file used to provision and configure your app's platform.
 
 ##### *Advanced Configuration Options*
-This Readme outlines only the most basic and commonly used settings. For the full list of available configuration options, view the **[Advanced PHP Configuration options](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md)**.
+This Readme outlines only the most basic and commonly used settings. For the full list of available configuration options, view the **[Advanced PHP Configuration options](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md)**.
 
 #### Overview of Basic boxfile.yml Configuration Options
 ```yaml
@@ -51,9 +51,9 @@ run.config:
 ```
 
 ##### Quick Links
-[Web Server Settings](#web-server-settings)  
-[PHP Settings](#php-settings)  
-[Apache Settings](#apache-settings)  
+[Web Server Settings](#web-server-settings)
+[PHP Settings](#php-settings)
+[Apache Settings](#apache-settings)
 
 ### Web Server Settings
 The following setting is used to select which web server to use in your application.
@@ -77,14 +77,14 @@ run.config:
 
 *Web server specific settings are available in the following sections of the Advanced PHP Configuration doc:*
 
-[Apache Settings](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md#apache-settings)  
-[Nginx Settings](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md#nginx-settings)  
-[Built-In PHP Web Server Settings](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md#built-in-php-web-server-settings)
+[Apache Settings](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md#apache-settings)
+[Nginx Settings](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md#nginx-settings)
+[Built-In PHP Web Server Settings](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md#built-in-php-web-server-settings)
 
 ---
 
 ### PHP Settings
-The following settings are typically configured in the php.ini. When using Nanobox, these are configured in the boxfile.yml.
+The following settings are typically configured in the php.ini. When using Microbox, these are configured in the boxfile.yml.
 
 - [runtime](#runtime)
 - [extensions](#extensions)
@@ -120,7 +120,7 @@ run.config:
 ---
 
 #### extensions
-Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md).
+Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md).
 
 ```yaml
 run.config:
@@ -135,7 +135,7 @@ run.config:
 ---
 
 #### zend_extensions
-Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md#zend-extensions).
+Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md#zend-extensions).
 ```yaml
 run.config:
   engine.config:
@@ -260,4 +260,4 @@ run.config:
 ---
 
 ## Help & Support
-This is a generic (non-framework-specific) PHP engine provided by [Nanobox](http://nanobox.io). If you need help with this engine, you can reach out to us in the [#nanobox IRC channel](http://webchat.freenode.net/?channels=nanobox). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/nanobox-io/nanobox-engine-php/issues/new).
+This is a generic (non-framework-specific) PHP engine provided by [Microbox](http://microbox.cloud). If you need help with this engine, you can reach out to us in the [Microbox Discord](https://discord.gg/MCDdHfy). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/mu-box/microbox-engine-php/issues/new).

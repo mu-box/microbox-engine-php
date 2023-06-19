@@ -145,7 +145,7 @@ validate_runtime_packages() {
   if [[ ${#bad_pkgs[@]} -gt 0 ]]; then
     echo "Can not find ${bad_pkgs[@]} to install"
     echo "Please verify they exist. Check what extensions are available here:"
-    echo "https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md"
+    echo "https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md"
     exit 1
   fi
 }
